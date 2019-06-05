@@ -13,12 +13,12 @@ img = cv2.imread(args.filename)
 horiz = cv2.flip(img, 1)  # pressing through the pattern flips the image horizontally
 large = cv2.resize(horiz, (0,0), fx=2, fy=2, interpolation=cv2.INTER_LANCZOS4)
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
-h, v, s =  cv2.split(hsv)
-blur = cv2.GaussianBlur(v, (3,3), 0)
+h, s, v =  cv2.split(hsv)
+blur = cv2.GaussianBlur(s, (3,3), 0)
 edge = cv2.Canny(blur, 0, 50) # perform edge detection with a low slope threshold to capture all edges
 kernel = np.ones((3,3),np.uint8)
 mask = cv2.dilate(edge, kernel, iterations=1)
-filt = cv2.bitwise_and(cv2.bitwise_not(mask), v) # filter the noisy edges out by masking off those regions
+filt = cv2.bitwise_and(cv2.bitwise_not(mask), s) # filter the noisy edges out by masking off those regions
 
 # get counts of times each value occurs in the filtered parts of the image
 G = 3
@@ -89,7 +89,7 @@ v = cv2.add(result, 100)
 hsv = cv2.merge((h,s,v))
 bgr = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
 cv2.namedWindow("output", cv2.WINDOW_AUTOSIZE)
-cv2.imshow("output", cv2.resize(bgr, (0,0), fx=.5, fy=.5, interpolation=cv2.INTER_LANCZOS4))
+cv2.imshow("output", bgr) #cv2.resize(bgr, (0,0), fx=.5, fy=.5, interpolation=cv2.INTER_LANCZOS4))
 
 # handle exiting out of the window via the ESC / ENTER key or the X in the corner of the window
 while cv2.getWindowProperty("output", cv2.WND_PROP_VISIBLE):
