@@ -21,11 +21,11 @@ About a second later (depending on the size of the image you chose) the output i
 ## More sample output
 
 #### Virtual embossings
-<img src="./examples/totoro_virtual.png" alt="virtual totoro embossing" width="40%">
-<img src="./examples/mononoke_virtual.png" alt="virtual mononoke embossing" width="40%">
+<img src="./examples/totoro_virtual.png" alt="virtual totoro embossing" width="35%">
+<img src="./examples/mononoke_virtual.png" alt="virtual mononoke embossing" width="35%">
 
 #### Actual embossings
-<img src="./examples/totoro_final.png" alt="actual totoro embossing" width="40%">
-<img src="./examples/mononoke_final.png" alt="actual mononoke embossing" width="40%">
+<img src="./examples/totoro_final.jpg" alt="actual totoro embossing" width="35%">
+<img src="./examples/mononoke_final.jpg" alt="actual mononoke embossing" width="35%">
 
 
