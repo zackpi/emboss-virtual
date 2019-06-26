@@ -1,4 +1,4 @@
-# Virtual Emobssing
+# Virtual Embossing
 
 This software uses a raster image of a layered vector drawing to simulate what it would look like if those layers were cut out and used to emboss a piece of paper. This is a pretty niche concept, so the code is very specific to one application: [my friend creates paper crafts](https://www.youtube.com/channel/UCPDpOa_C5eoZyRvEaHQ8xIg) so I made it to help speed up his design process. You can read my blog about this project [here](http://zackpi.com/hobby/2019-06-03-emboss.html).
 
